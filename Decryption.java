@@ -1,13 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package encrypdecryp;
 
-/**
- *
- * @author 91861
- */
 public class Decryption {
     public String getTextKey(String text,int key){
         System.out.println("From encryption class");
