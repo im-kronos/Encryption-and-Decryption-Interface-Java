@@ -3,26 +3,30 @@ import java.awt.*;
 import java.awt.event.*;
 
 class Homepage extends JFrame implements ActionListener {
-    JButton EncryptionButton;
-    JButton Decryption;
+    JButton caeser;
+    JButton aes;
+     JButton utf;
+    
     JButton quitButton;
 
 
     public Homepage() {
         super("Encyption-Decryption");
 
-        EncryptionButton = new JButton("Encryption");
-        Decryption = new JButton("Decryption");
-
+        caeser = new JButton("Caeser Method");
+        aes = new JButton("AES_Method");
+        utf = new JButton("UTF-8 Method");
         quitButton = new JButton("Quit");
 
-        EncryptionButton.addActionListener(this);
-        Decryption.addActionListener(this);
+        caeser.addActionListener(this);
+        aes.addActionListener(this);
+        utf.addActionListener(this);
         quitButton.addActionListener(this);
 
         JPanel panel = new JPanel(new GridLayout(2, 2));
-        panel.add(EncryptionButton);
-        panel.add(Decryption);
+        panel.add(caeser);
+        panel.add(aes);
+        panel.add(utf);
         panel.add(quitButton);
 
         getContentPane().add(panel);
@@ -33,9 +37,11 @@ class Homepage extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) 
     {
-        if (e.getSource() == EncryptionButton) {
+        if (e.getSource() == caeser) {
           //  TicTacToe game = new TicTacToe();
-        } else if (e.getSource() == Decryption) {
+        } else if (e.getSource() == aes) {
+           // PongGame game = new PongGame();
+        }else if (e.getSource() == utf) {
            // PongGame game = new PongGame();
         }
            //{
