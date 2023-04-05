@@ -52,6 +52,7 @@ public class Login extends JFrame implements ActionListener {
                 System.out.println(forUser + forPswd);
                 if (usr.equals(forUser) & pswd.equals(forPswd)) {
                     JOptionPane.showMessageDialog(null, "Login Successfully!!");
+                    Homepage t=new Homepage();
                     break;
                 } else if (i == (ln - 6)) {
                     JOptionPane.showMessageDialog(null, "incorrect username/password");
@@ -83,7 +84,7 @@ public class Login extends JFrame implements ActionListener {
 
     Login() {
 
-        setTitle("Login Form in Windows Form");
+        setTitle("Login Form");
 
         setVisible(true);
 
@@ -140,7 +141,8 @@ public class Login extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         showData();
-
+        //if (e.getSource() == btn1) 
+            // Homepage t =new Homepage();
     }
 
     public void showData() {
