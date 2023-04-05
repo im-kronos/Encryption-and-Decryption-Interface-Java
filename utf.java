@@ -6,7 +6,7 @@ import javax.crypto.*;
 import javax.crypto.spec.*;
  import javax.swing.JOptionPane;
 
-public class TestEncryptDecrypt {
+public class utf {
 
 private final String ALGO = "DES";
 private final String MODE = "ECB";
@@ -14,7 +14,7 @@ private final String PADDING = "PKCS5Padding";
 private static int mode = 0;
 
 public static void main(String args[]) {
-    TestEncryptDecrypt me = new TestEncryptDecrypt();
+    utf me = new utf();
     if(args.length == 0) mode = 2;
     else mode = Integer.parseInt(args[0]);
     switch (mode) {
