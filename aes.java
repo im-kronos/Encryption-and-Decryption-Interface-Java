@@ -43,7 +43,7 @@ private String encode(byte[] data) {
 public static void main(String[] args) {
         try {
             Encryption aes_encryption = new Encryption();
-            String data = JOptionPane.showInputDialog( "Enter text to be Encrypted" ); 
+            String data = JOptionPane.showInputDialog( "Enter text to be Encrypted and Decrypted using AES" ); 
             aes_encryption.init();
             Scanner sc=new Scanner(System.in);
            // System.out.println("Enter text to be encrypted");
@@ -56,6 +56,7 @@ public static void main(String[] args) {
 
             
             JOptionPane.showMessageDialog(null,"The encrtpted text is " + encryptedData);  
+            JOptionPane.showMessageDialog(null,"The decrtpted text is " + decryptedData);
             //System.out.println("Encrypted Data : " + encryptedData);
             //System.out.println("Decrypted Data : " + decryptedData);
         } catch (Exception ignored) {
