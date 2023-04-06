@@ -6,13 +6,13 @@ import java.util.Base64;
 import java.util.Scanner;
 import javax.swing.*;
 
-public class aesUI {
+public class aes {
     private SecretKey key;
     private final int KEY_SIZE = 128;
     private final int DATA_LENGTH = 128;
     private Cipher encryptionCipher;
 
-    public aesUI() {
+    public aes() {
         try {
             init();
             Scanner scanner = new Scanner(System.in);
@@ -59,6 +59,6 @@ public class aesUI {
     }
 
     public static void main(String[] args) {
-        aesUI aesEncryption = new aesUI();
+        aes aesEncryption = new aes();
     }
 }
