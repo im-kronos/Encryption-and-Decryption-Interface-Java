@@ -1,32 +1,34 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.*;
+import java.util.*;
 
 class Homepage extends JFrame implements ActionListener {
-    JButton caeser;
-    JButton aes;
-     JButton utf;
-    
+  
+    JButton caeser1;
+    JButton aes1;
+    JButton utf1;
     JButton quitButton;
 
 
     public Homepage() {
         super("Encyption-Decryption");
 
-        caeser = new JButton("Caeser Method");
-        aes = new JButton("AES_Method");
-        utf = new JButton("UTF-8 Method");
+        caeser1 = new JButton("Caeser Method");
+        aes1 = new JButton("AES_Method");
+        utf1 = new JButton("UTF-8 Method");
         quitButton = new JButton("Quit");
 
-        caeser.addActionListener(this);
-        aes.addActionListener(this);
-        utf.addActionListener(this);
+        caeser1.addActionListener(this);
+        aes1.addActionListener(this);
+        utf1.addActionListener(this);
         quitButton.addActionListener(this);
 
         JPanel panel = new JPanel(new GridLayout(2, 2));
-        panel.add(caeser);
-        panel.add(aes);
-        panel.add(utf);
+        panel.add(caeser1);
+        panel.add(aes1);
+        panel.add(utf1);
         panel.add(quitButton);
 
         getContentPane().add(panel);
@@ -34,27 +36,18 @@ class Homepage extends JFrame implements ActionListener {
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-
-    public void actionPerformed(ActionEvent e) 
-    {
-        if (e.getSource() == caeser) {
-          //  TicTacToe game = new TicTacToe();
-        } else if (e.getSource() == aes) {
-           // PongGame game = new PongGame();
-        }else if (e.getSource() == utf) {
-           // PongGame game = new PongGame();
-        }
-           //{
-            //Homepage frame = new Homepage();
-           // }
-           else if (e.getSource() == quitButton)
-            {
+   
+   public void actionPerformed(ActionEvent e) 
+    {  
+      
+       if (e.getSource() == caeser1) {         
+          CaesarCipher pro=new CaesarCipher();
+        } 
+        else if (e.getSource() == aes1) {           
+            aesUI pro=new aesUI();   
+        }else if (e.getSource() == utf1) {         
+           UtfSwing pro= new UtfSwing(); 
+        }else if (e.getSource() == quitButton) {
             System.exit(0);
-            }
-        
-        }
-
-    public static void main(String[] args) {
-        Homepage project = new Homepage();
-    }
-}
+         }
+   }
