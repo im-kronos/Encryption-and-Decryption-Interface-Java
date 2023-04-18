@@ -19,6 +19,7 @@ class Homepage extends JFrame implements ActionListener {
         aes1 = new JButton("AES_Method");
         utf1 = new JButton("UTF-8 Method");
         quitButton = new JButton("Quit");
+        
 
         caeser1.addActionListener(this);
         aes1.addActionListener(this);
@@ -30,7 +31,8 @@ class Homepage extends JFrame implements ActionListener {
         panel.add(aes1);
         panel.add(utf1);
         panel.add(quitButton);
-
+        
+        
         getContentPane().add(panel);
         pack();
         setVisible(true);
@@ -51,3 +53,12 @@ class Homepage extends JFrame implements ActionListener {
             System.exit(0);
          }
    }
+
+
+   
+  
+
+    public static void main(String[] args) {
+        Homepage project = new Homepage();
+    }
+}
