@@ -16,10 +16,10 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class SignUp extends JFrame implements ActionListener   {
-   JLabel l1, l2, l3, l4, l5, l6, l7, l8;  //all labels for textField
-    JTextField tf1, tf2, tf5, tf6, tf7;   // others fields
-    JButton btn1, btn2;  //buttons for signup and clear
-    JPasswordField p1, p2;  // password fields
+   JLabel l1, l2, l3, l4, l5, l6, l7, l8;  
+    JTextField tf1, tf2, tf5, tf6, tf7;   
+    JButton btn1, btn2;  
+    JPasswordField p1, p2;  
     File f = new File("C:\\Files");
     int ln;
    
@@ -39,7 +39,7 @@ public class SignUp extends JFrame implements ActionListener   {
                 FileWriter fw = new FileWriter(f+"\\logins.txt");
                 System.out.println("File created");
             } catch (IOException ex1) {
-               // Logger.getLogger(notepad.class.getName()).log(Level.SEVERE, null, ex1);
+               
             }
         }
         
@@ -51,7 +51,7 @@ public class SignUp extends JFrame implements ActionListener   {
             for(int i=0;i<ln;i++){
                 raf.readLine();
             }
-            //if condition added after video to have no lines on first entry
+            
             if(ln>0){
             raf.writeBytes("\r\n");
             raf.writeBytes("\r\n");
@@ -64,9 +64,9 @@ public class SignUp extends JFrame implements ActionListener   {
             raf.writeBytes("Phone No:"+Phn);
             
         } catch (FileNotFoundException ex) {
-            //Logger.getLogger(notepad.class.getName()).log(Level.SEVERE, null, ex);
+           
         } catch (IOException ex) {
-            //Logger.getLogger(notepad.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
         
     }
@@ -79,9 +79,9 @@ public class SignUp extends JFrame implements ActionListener   {
             }
             System.out.println("number of lines:"+ln);
         } catch (FileNotFoundException ex) {
-           // Logger.getLogger(notepad.class.getName()).log(Level.SEVERE, null, ex);
+           
         } catch (IOException ex) {
-           // Logger.getLogger(notepad.class.getName()).log(Level.SEVERE, null, ex);
+          
         }
         
     }
@@ -89,7 +89,7 @@ public class SignUp extends JFrame implements ActionListener   {
     SignUp()  
     {  
         setVisible(true);  
-        setSize(700, 700);  
+        setSize(800, 800);  
         setLayout(null);  
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
         setTitle("Registration Form in Java");  
@@ -173,7 +173,8 @@ public class SignUp extends JFrame implements ActionListener   {
                    addData(s1,s8,s2,s5,s6,s7);
                        
                      
-                        JOptionPane.showMessageDialog(btn1, "Data Saved Successfully");   
+                        JOptionPane.showMessageDialog(btn1, "Data Saved Successfully");
+                        Login pg=new Login();   
                 }  
                 catch (Exception ex)   
                 {  
